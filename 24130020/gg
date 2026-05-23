@@ -1,0 +1,26 @@
+import random
+def choose_word():
+    words = ["apple", "banana", "cherry", "orange", "pear", "grape", "kiwi"]
+    return random.choice(words)
+def display_word(word, guessed_letters):
+    display = ""
+    for letters in word:
+        if letters in guessed_letters:
+            letters + " "
+        else :
+            print (letters + "_")
+
+    return display.strip()
+def hangman():
+    word = choose_word()
+    guessed_letters = []
+    attempts = 6
+    print("Welcome to Hangman!")
+    print("Try to guess the word.")
+    while attempts > 0:
+        display_word(word,guessed_letters)
+        word = input("nhap chu cai")
+        guessed_letters.append()
+
+        if attempts == 0:
+            print("\nSorry, you've run out of attempts. The word was:", word)
